@@ -252,6 +252,10 @@ To copy files and directories in `https://example.com/path/to/dir` to `/tmp/dir`
 
     rclone copy --sftp-host example.com :sftp:path/to/dir /tmp/dir
 
+To mount an S3 bucket scoped to a specific key to `tmp/dir`:
+
+    rclone mount :s3,provider=AWS,access_key_id=YOUR_ACCESS_KEY_ID,secret_access_key=YOUR_SECRET_KEY,region=YOUR_REGION:bucket_name/scoped_key /tmp/dir
+
 To copy files and directories from `example.com` in the relative
 directory `path/to/dir` to `/tmp/dir` using sftp.
 
